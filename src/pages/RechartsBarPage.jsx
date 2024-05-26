@@ -13,33 +13,18 @@ import {
 
 import { Typography } from 'antd';
 
-import salesData from '../data/supermarket_sales.json';
+import { BAR_DATA } from '../data';
 
 import { Template } from './Template';
 
 const { Title } = Typography;
-
-const data = Object.values(salesData.reduce((acc, current) => {
-    const productLine = current['Product line'];
-    const totalValue = parseFloat(current.Total);
-
-    if (!acc[productLine]) {
-        acc[productLine] = {
-            'Product line': productLine,
-            Total: 0,
-        };
-    }
-
-    acc[productLine].Total += totalValue;
-    return acc;
-}, {}));
 
 export const RechartsBarPage = () => (
     <Template>
         <Title>Recharts - Bar Chart</Title>
         <ResponsiveContainer width="100%" height={400}>
             <BarChart
-                data={data}
+                data={BAR_DATA}
                 margin={{
                     top: 20, right: 30, left: 20, bottom: 5,
                 }}

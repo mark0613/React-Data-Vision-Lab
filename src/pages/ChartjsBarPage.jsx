@@ -13,7 +13,7 @@ import { Bar } from 'react-chartjs-2';
 
 import { Typography } from 'antd';
 
-import salesData from '../data/supermarket_sales.json';
+import { BAR_DATA } from '../data';
 
 import { Template } from './Template';
 
@@ -21,27 +21,12 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const { Title: AntdTitle } = Typography;
 
-const data = Object.values(salesData.reduce((acc, current) => {
-    const productLine = current['Product line'];
-    const totalValue = parseFloat(current.Total);
-
-    if (!acc[productLine]) {
-        acc[productLine] = {
-            'Product line': productLine,
-            Total: 0,
-        };
-    }
-
-    acc[productLine].Total += totalValue;
-    return acc;
-}, {}));
-
-const chartData = {
-    labels: data.map((item) => item['Product line']),
+const data = {
+    labels: BAR_DATA.map((item) => item['Product line']),
     datasets: [
         {
             label: 'Total Sales',
-            data: data.map((item) => item.Total),
+            data: BAR_DATA.map((item) => item.Total),
             backgroundColor: 'rgba(75, 192, 192, 0.6)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
@@ -65,6 +50,6 @@ const options = {
 export const ChartjsBarPage = () => (
     <Template>
         <AntdTitle>Chart.js - Bar Chart</AntdTitle>
-        <Bar data={chartData} options={options} />
+        <Bar data={data} options={options} />
     </Template>
 );

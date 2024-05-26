@@ -13,7 +13,7 @@ import { Scatter } from 'react-chartjs-2';
 
 import { Typography } from 'antd';
 
-import salesData from '../data/supermarket_sales.json';
+import { SCATTER_DATA } from '../data';
 
 import { Template } from './Template';
 
@@ -21,34 +21,11 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, Tooltip, Legend, Titl
 
 const { Title: AntdTitle } = Typography;
 
-const data = Object.values(salesData.reduce((acc, current) => {
-    if (current['Product line'] !== 'Food and beverages') {
-        return acc;
-    }
-
-    const unitPrice = Math.round(parseFloat(current['Unit price']));
-    const quantity = parseInt(current.Quantity, 10);
-
-    if (!acc[unitPrice]) {
-        acc[unitPrice] = {
-            'Unit price': unitPrice,
-            Quantity: 0,
-        };
-    }
-
-    acc[unitPrice].Quantity += quantity;
-
-    return acc;
-}, {})).map((item) => ({
-    'Unit price': item['Unit price'],
-    Quantity: item.Quantity,
-}));
-
-const chartData = {
+const data = {
     datasets: [
         {
             label: 'Sales',
-            data: data.map((item) => ({ x: item['Unit price'], y: item.Quantity })),
+            data: SCATTER_DATA.map((item) => ({ x: item['Unit price'], y: item.Quantity })),
             backgroundColor: 'rgba(75, 192, 192, 0.6)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
@@ -88,6 +65,6 @@ const options = {
 export const ChartjsScatterPage = () => (
     <Template>
         <AntdTitle>Chart.js - Scatter Plot</AntdTitle>
-        <Scatter data={chartData} options={options} />
+        <Scatter data={data} options={options} />
     </Template>
 );

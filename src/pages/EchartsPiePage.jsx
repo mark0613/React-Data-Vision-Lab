@@ -4,26 +4,16 @@ import ReactEcharts from 'echarts-for-react';
 
 import { Typography } from 'antd';
 
-import salesData from '../data/supermarket_sales.json';
+import { PIE_DATA } from '../data';
 
 import { Template } from './Template';
 
 const { Title } = Typography;
 
-const data = Object.values(salesData.reduce((acc, current) => {
-    const customerType = current['Customer type'];
-    const totalValue = parseFloat(current.Total);
-
-    if (!acc[customerType]) {
-        acc[customerType] = {
-            name: customerType,
-            value: 0,
-        };
-    }
-
-    acc[customerType].value += totalValue;
-    return acc;
-}, {}));
+const data = PIE_DATA.map((item) => ({
+    name: item['Customer type'],
+    value: item.Total,
+}));
 
 const getOption = () => ({
     title: {

@@ -6,26 +6,17 @@ import {
 
 import { Typography } from 'antd';
 
-import salesData from '../data/supermarket_sales.json';
+import { PIE_DATA } from '../data';
 
 import { Template } from './Template';
 
 const { Title } = Typography;
 
-const data = Object.values(salesData.reduce((acc, current) => {
-    const customerType = current['Customer type'];
-    const totalValue = parseFloat(current.Total);
+const data = PIE_DATA.map((item) => ({
+    name: item['Customer type'],
+    value: item.Total,
+}));
 
-    if (!acc[customerType]) {
-        acc[customerType] = {
-            name: customerType,
-            value: 0,
-        };
-    }
-
-    acc[customerType].value += totalValue;
-    return acc;
-}, {}));
 const total = data.reduce((acc, current) => acc + current.value, 0);
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
