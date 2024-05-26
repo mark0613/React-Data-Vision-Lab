@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -6,7 +8,12 @@ const items = [
     {
         key: 'd3',
         label: 'D3',
-        children: [],
+        children: [
+            {
+                key: 'bar',
+                label: 'Bar Chart',
+            },
+        ],
     },
     {
         key: 'recharts',
@@ -33,6 +40,13 @@ export const Template = ({ children }) => {
         },
     } = theme.useToken();
 
+    const navigate = useNavigate();
+
+    const onMenuClick = ({ keyPath }) => {
+        const path = keyPath.reverse().join('/');
+        navigate(`/${path}`);
+    };
+
     return (
         <Layout>
             <Sider
@@ -45,6 +59,7 @@ export const Template = ({ children }) => {
                     mode="inline"
                     defaultSelectedKeys={['d3']}
                     items={items}
+                    onClick={onMenuClick}
                 />
             </Sider>
             <Layout>
