@@ -26,7 +26,12 @@ const items = [
     {
         key: 'recharts',
         label: 'Recharts',
-        children: [],
+        children: [
+            {
+                key: 'bar',
+                label: 'Bar Chart',
+            },
+        ],
     },
     {
         key: 'echarts',
