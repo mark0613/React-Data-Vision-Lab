@@ -4,9 +4,8 @@ import ReactEcharts from 'echarts-for-react';
 
 import { Typography } from 'antd';
 
-import { PIE_DATA } from '../data';
-
-import { Template } from './Template';
+import { PIE_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 

@@ -12,9 +12,8 @@ import {
 
 import { Typography } from 'antd';
 
-import { SCATTER_DATA } from '../data';
-
-import { Template } from './Template';
+import { SCATTER_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 

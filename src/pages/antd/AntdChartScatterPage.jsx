@@ -3,9 +3,8 @@
 import { Typography } from 'antd';
 import { Scatter } from '@ant-design/charts';
 
-import { SCATTER_DATA } from '../data';
-
-import { Template } from './Template';
+import { SCATTER_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title: AntdTitle } = Typography;
 

@@ -4,9 +4,8 @@ import ReactECharts from 'echarts-for-react';
 
 import { Typography } from 'antd';
 
-import { BAR_DATA } from '../data';
-
-import { Template } from './Template';
+import { BAR_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 

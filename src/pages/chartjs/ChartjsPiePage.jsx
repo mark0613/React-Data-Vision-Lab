@@ -13,9 +13,8 @@ import { Pie } from 'react-chartjs-2';
 
 import { Typography } from 'antd';
 
-import { PIE_DATA } from '../data';
-
-import { Template } from './Template';
+import { PIE_DATA } from '../../data';
+import { Template } from '../Template';
 
 ChartJS.register(CategoryScale, LinearScale, ArcElement, Tooltip, Legend, Title);
 

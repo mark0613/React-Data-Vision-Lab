@@ -1,9 +1,8 @@
 import { Typography } from 'antd';
 
-import { BarChart } from '../charts/d3';
-import { BAR_DATA } from '../data';
-
-import { Template } from './Template';
+import { BarChart } from '../../charts/d3';
+import { BAR_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 

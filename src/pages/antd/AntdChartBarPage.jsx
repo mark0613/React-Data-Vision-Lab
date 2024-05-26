@@ -3,9 +3,8 @@
 import { Typography } from 'antd';
 import { Column } from '@ant-design/charts';
 
-import { BAR_DATA } from '../data';
-
-import { Template } from './Template';
+import { BAR_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 

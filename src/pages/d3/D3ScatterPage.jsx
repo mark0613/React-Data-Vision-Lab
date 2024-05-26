@@ -1,9 +1,8 @@
 import { Typography } from 'antd';
 
-import { ScatterPlot } from '../charts/d3';
-import { SCATTER_DATA } from '../data';
-
-import { Template } from './Template';
+import { ScatterPlot } from '../../charts/d3';
+import { SCATTER_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 

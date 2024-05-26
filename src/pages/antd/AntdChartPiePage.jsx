@@ -3,9 +3,8 @@
 import { Typography } from 'antd';
 import { Pie } from '@ant-design/charts';
 
-import { PIE_DATA } from '../data';
-
-import { Template } from './Template';
+import { PIE_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title: AntdTitle } = Typography;
 

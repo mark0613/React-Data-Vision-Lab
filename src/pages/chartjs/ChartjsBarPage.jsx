@@ -13,9 +13,8 @@ import { Bar } from 'react-chartjs-2';
 
 import { Typography } from 'antd';
 
-import { BAR_DATA } from '../data';
-
-import { Template } from './Template';
+import { BAR_DATA } from '../../data';
+import { Template } from '../Template';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 

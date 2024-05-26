@@ -1,9 +1,8 @@
 import { Typography } from 'antd';
 
-import { WordCloud } from '../charts/d3';
-import { WORD_DATA } from '../data';
-
-import { Template } from './Template';
+import { WordCloud } from '../../charts/d3';
+import { WORD_DATA } from '../../data';
+import { Template } from '../Template';
 
 const { Title } = Typography;
 
