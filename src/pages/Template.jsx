@@ -60,9 +60,14 @@ const items = [
         ],
     },
     {
-        key: 'chart.js',
+        key: 'chartjs',
         label: 'Chart.js',
-        children: [],
+        children: [
+            {
+                key: 'bar',
+                label: 'Bar Chart',
+            },
+        ],
     },
 ];
 

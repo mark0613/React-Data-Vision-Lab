@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import {
+    ChartjsBarPage,
     D3BarPage,
     D3PiePage,
     D3ScatterPage,
@@ -20,6 +21,10 @@ export const Router = () => (
                 path="/"
                 element={<Template />}
                 exact
+            />
+            <Route
+                path="/chartjs/bar"
+                element={<ChartjsBarPage />}
             />
             <Route
                 path="/d3/bar"
