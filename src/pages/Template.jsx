@@ -10,19 +10,19 @@ const items = [
         label: 'D3',
         children: [
             {
-                key: 'bar',
+                key: 'd3/bar',
                 label: 'Bar Chart',
             },
             {
-                key: 'pie',
+                key: 'd3/pie',
                 label: 'Pie Chart',
             },
             {
-                key: 'scatter',
+                key: 'd3/scatter',
                 label: 'Scatter Plot',
             },
             {
-                key: 'word-cloud',
+                key: 'd3/word-cloud',
                 label: 'Word Cloud',
             },
         ],
@@ -32,15 +32,15 @@ const items = [
         label: 'Recharts',
         children: [
             {
-                key: 'bar',
+                key: 'recharts/bar',
                 label: 'Bar Chart',
             },
             {
-                key: 'pie',
+                key: 'recharts/pie',
                 label: 'Pie Chart',
             },
             {
-                key: 'scatter',
+                key: 'recharts/scatter',
                 label: 'Scatter Plot',
             },
         ],
@@ -50,15 +50,15 @@ const items = [
         label: 'ECharts',
         children: [
             {
-                key: 'bar',
+                key: 'echarts/bar',
                 label: 'Bar Chart',
             },
             {
-                key: 'pie',
+                key: 'echarts/pie',
                 label: 'Pie Chart',
             },
             {
-                key: 'scatter',
+                key: 'echarts/scatter',
                 label: 'Scatter Plot',
             },
         ],
@@ -68,15 +68,15 @@ const items = [
         label: 'Chart.js',
         children: [
             {
-                key: 'bar',
+                key: 'chartjs/bar',
                 label: 'Bar Chart',
             },
             {
-                key: 'pie',
+                key: 'chartjs/pie',
                 label: 'Pie Chart',
             },
             {
-                key: 'scatter',
+                key: 'chartjs/scatter',
                 label: 'Scatter Plot',
             },
         ],
@@ -93,11 +93,6 @@ export const Template = ({ children }) => {
 
     const navigate = useNavigate();
 
-    const onMenuClick = ({ keyPath }) => {
-        const path = keyPath.reverse().join('/');
-        navigate(`/${path}`);
-    };
-
     return (
         <Layout>
             <Sider
@@ -110,7 +105,7 @@ export const Template = ({ children }) => {
                     mode="inline"
                     defaultSelectedKeys={['d3']}
                     items={items}
-                    onClick={onMenuClick}
+                    onClick={({ key }) => navigate(`/${key}`)}
                 />
             </Sider>
             <Layout>
