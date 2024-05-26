@@ -11,3 +11,6 @@
     yarn dev
     ```
 3. Open the browser and go to `http://127.0.0.1:3000`
+
+## Reference
+- 資料來源 - [Sales of a Supermarket](https://www.kaggle.com/datasets/lovishbansal123/sales-of-a-supermarket)
