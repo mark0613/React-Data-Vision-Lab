@@ -4,6 +4,7 @@ export * from './ChartjsScatterPage';
 export * from './D3BarPage';
 export * from './D3PiePage';
 export * from './D3ScatterPage';
+export * from './D3WordCloudPage';
 export * from './EchartsBarPage';
 export * from './EchartsPiePage';
 export * from './EchartsScatterPage';

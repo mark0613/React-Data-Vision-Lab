@@ -21,6 +21,10 @@ const items = [
                 key: 'scatter',
                 label: 'Scatter Plot',
             },
+            {
+                key: 'word-cloud',
+                label: 'Word Cloud',
+            },
         ],
     },
     {

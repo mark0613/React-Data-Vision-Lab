@@ -1,0 +1,7 @@
+.selected-group circle {
+    filter: url(#soft-glow);
+}
+
+.selected-group text {
+    font-weight: bold;
+}

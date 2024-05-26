@@ -7,6 +7,7 @@ import {
     D3BarPage,
     D3PiePage,
     D3ScatterPage,
+    D3WordCloudPage,
     EchartsBarPage,
     EchartsPiePage,
     EchartsScatterPage,
@@ -47,6 +48,10 @@ export const Router = () => (
             <Route
                 path="/d3/scatter"
                 element={<D3ScatterPage />}
+            />
+            <Route
+                path="/d3/word-cloud"
+                element={<D3WordCloudPage />}
             />
             <Route
                 path="/echarts/bar"
