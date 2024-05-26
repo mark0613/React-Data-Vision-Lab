@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 
 import { Typography } from 'antd';
 import { Pie } from '@ant-design/charts';
@@ -22,9 +23,10 @@ const config = {
     colorField: 'type',
     radius: 1,
     label: {
-        type: 'spider',
-        labelHeight: 28,
-        content: '{name}\n{percentage}',
+        text: 'type',
+        style: {
+            fontWeight: 'bold',
+        },
     },
     interactions: [
         { type: 'element-selected' },
