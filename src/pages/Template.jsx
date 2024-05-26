@@ -1,4 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Layout, Menu, theme } from 'antd';
 
@@ -91,7 +93,10 @@ export const Template = ({ children }) => {
         },
     } = theme.useToken();
 
+    const location = useLocation();
     const navigate = useNavigate();
+
+    const [openKeys, setOpenKeys] = useState([location.pathname.split('/')[1]]);
 
     return (
         <Layout>
@@ -103,9 +108,13 @@ export const Template = ({ children }) => {
                 <Menu
                     theme="dark"
                     mode="inline"
-                    defaultSelectedKeys={['d3']}
+                    defaultOpenKeys={openKeys}
+                    selectedKeys={[location.pathname.slice(1)]}
                     items={items}
-                    onClick={({ key }) => navigate(`/${key}`)}
+                    onClick={({ key }) => {
+                        setOpenKeys(key);
+                        navigate(`/${key}`);
+                    }}
                 />
             </Sider>
             <Layout>
