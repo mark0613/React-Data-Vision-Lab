@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import {
+    AntdChartBarPage,
+    AntdChartPiePage,
+    AntdChartScatterPage,
     ChartjsBarPage,
     ChartjsPiePage,
     ChartjsScatterPage,
@@ -24,6 +27,18 @@ export const Router = () => (
                 path="/"
                 element={<Template />}
                 exact
+            />
+            <Route
+                path="/antd/bar"
+                element={<AntdChartBarPage />}
+            />
+            <Route
+                path="/antd/pie"
+                element={<AntdChartPiePage />}
+            />
+            <Route
+                path="/antd/scatter"
+                element={<AntdChartScatterPage />}
             />
             <Route
                 path="/chartjs/bar"

@@ -1,3 +1,6 @@
+export * from './AntdChartBarPage';
+export * from './AntdChartPiePage';
+export * from './AntdChartScatterPage';
 export * from './ChartjsBarPage';
 export * from './ChartjsPiePage';
 export * from './ChartjsScatterPage';

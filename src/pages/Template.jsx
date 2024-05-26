@@ -83,6 +83,24 @@ const items = [
             },
         ],
     },
+    {
+        key: 'antd',
+        label: 'Ant Design Chart',
+        children: [
+            {
+                key: 'antd/bar',
+                label: 'Bar Chart',
+            },
+            {
+                key: 'antd/pie',
+                label: 'Pie Chart',
+            },
+            {
+                key: 'antd/scatter',
+                label: 'Scatter Plot',
+            },
+        ],
+    },
 ];
 
 export const Template = ({ children }) => {
