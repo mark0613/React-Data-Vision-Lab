@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import {
     ChartjsBarPage,
+    ChartjsPiePage,
     D3BarPage,
     D3PiePage,
     D3ScatterPage,
@@ -25,6 +26,10 @@ export const Router = () => (
             <Route
                 path="/chartjs/bar"
                 element={<ChartjsBarPage />}
+            />
+            <Route
+                path="/chartjs/pie"
+                element={<ChartjsPiePage />}
             />
             <Route
                 path="/d3/bar"

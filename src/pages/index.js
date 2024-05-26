@@ -1,4 +1,5 @@
 export * from './ChartjsBarPage';
+export * from './ChartjsPiePage';
 export * from './D3BarPage';
 export * from './D3PiePage';
 export * from './D3ScatterPage';
