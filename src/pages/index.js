@@ -3,6 +3,7 @@ export * from './D3PiePage';
 export * from './D3ScatterPage';
 export * from './EchartsBarPage';
 export * from './EchartsPiePage';
+export * from './EchartsScatterPage';
 export * from './RechartsBarPage';
 export * from './RechartsPiePage';
 export * from './RechartsScatterPage';
