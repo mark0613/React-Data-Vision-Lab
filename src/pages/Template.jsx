@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { Layout, Menu, theme } from 'antd';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content, Footer, Sider } = Layout;
 
 const items = [
     {
@@ -118,13 +118,6 @@ export const Template = ({ children }) => {
                 />
             </Sider>
             <Layout>
-                <Header
-                    style={{
-                        padding: 0,
-                        background: colorBgContainer,
-                        height: '64px',
-                    }}
-                />
                 <Content
                     style={{
                         margin: '24px 16px 0',
@@ -133,7 +126,7 @@ export const Template = ({ children }) => {
                     <div
                         style={{
                             padding: 24,
-                            minHeight: 'calc(100vh - 152px)',
+                            minHeight: 'calc(100vh - 88px)',
                             background: colorBgContainer,
                             borderRadius: borderRadiusLG,
                         }}
