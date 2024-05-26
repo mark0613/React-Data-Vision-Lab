@@ -13,6 +13,10 @@ const items = [
                 key: 'bar',
                 label: 'Bar Chart',
             },
+            {
+                key: 'pie',
+                label: 'Pie Chart',
+            },
         ],
     },
     {
