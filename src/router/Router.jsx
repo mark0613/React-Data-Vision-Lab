@@ -1,6 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { D3BarPage, D3PiePage, Template } from '../pages';
+import {
+    D3BarPage,
+    D3PiePage,
+    D3ScatterPage,
+    Template,
+} from '../pages';
 
 export const Router = () => (
     <BrowserRouter>
@@ -17,6 +22,10 @@ export const Router = () => (
             <Route
                 path="/d3/pie"
                 element={<D3PiePage />}
+            />
+            <Route
+                path="/d3/scatter"
+                element={<D3ScatterPage />}
             />
         </Routes>
     </BrowserRouter>

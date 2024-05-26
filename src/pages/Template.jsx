@@ -17,6 +17,10 @@ const items = [
                 key: 'pie',
                 label: 'Pie Chart',
             },
+            {
+                key: 'scatter',
+                label: 'Scatter Plot',
+            },
         ],
     },
     {
