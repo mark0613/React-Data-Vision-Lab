@@ -6,6 +6,7 @@ import {
     D3ScatterPage,
     RechartsBarPage,
     RechartsPiePage,
+    RechartsScatterPage,
     Template,
 } from '../pages';
 
@@ -36,6 +37,10 @@ export const Router = () => (
             <Route
                 path="/recharts/pie"
                 element={<RechartsPiePage />}
+            />
+            <Route
+                path="/recharts/scatter"
+                element={<RechartsScatterPage />}
             />
         </Routes>
     </BrowserRouter>

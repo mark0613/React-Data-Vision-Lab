@@ -3,4 +3,5 @@ export * from './D3PiePage';
 export * from './D3ScatterPage';
 export * from './RechartsBarPage';
 export * from './RechartsPiePage';
+export * from './RechartsScatterPage';
 export * from './Template';
