@@ -8,59 +8,19 @@ const { Content, Footer, Sider } = Layout;
 
 const items = [
     {
-        key: 'd3',
-        label: 'D3',
+        key: 'antd',
+        label: 'Ant Design Chart',
         children: [
             {
-                key: 'd3/bar',
+                key: 'antd/bar',
                 label: 'Bar Chart',
             },
             {
-                key: 'd3/pie',
+                key: 'antd/pie',
                 label: 'Pie Chart',
             },
             {
-                key: 'd3/scatter',
-                label: 'Scatter Plot',
-            },
-            {
-                key: 'd3/word-cloud',
-                label: 'Word Cloud',
-            },
-        ],
-    },
-    {
-        key: 'recharts',
-        label: 'Recharts',
-        children: [
-            {
-                key: 'recharts/bar',
-                label: 'Bar Chart',
-            },
-            {
-                key: 'recharts/pie',
-                label: 'Pie Chart',
-            },
-            {
-                key: 'recharts/scatter',
-                label: 'Scatter Plot',
-            },
-        ],
-    },
-    {
-        key: 'echarts',
-        label: 'ECharts',
-        children: [
-            {
-                key: 'echarts/bar',
-                label: 'Bar Chart',
-            },
-            {
-                key: 'echarts/pie',
-                label: 'Pie Chart',
-            },
-            {
-                key: 'echarts/scatter',
+                key: 'antd/scatter',
                 label: 'Scatter Plot',
             },
         ],
@@ -84,19 +44,59 @@ const items = [
         ],
     },
     {
-        key: 'antd',
-        label: 'Ant Design Chart',
+        key: 'd3',
+        label: 'D3',
         children: [
             {
-                key: 'antd/bar',
+                key: 'd3/bar',
                 label: 'Bar Chart',
             },
             {
-                key: 'antd/pie',
+                key: 'd3/pie',
                 label: 'Pie Chart',
             },
             {
-                key: 'antd/scatter',
+                key: 'd3/scatter',
+                label: 'Scatter Plot',
+            },
+            {
+                key: 'd3/word-cloud',
+                label: 'Word Cloud',
+            },
+        ],
+    },
+    {
+        key: 'echarts',
+        label: 'ECharts',
+        children: [
+            {
+                key: 'echarts/bar',
+                label: 'Bar Chart',
+            },
+            {
+                key: 'echarts/pie',
+                label: 'Pie Chart',
+            },
+            {
+                key: 'echarts/scatter',
+                label: 'Scatter Plot',
+            },
+        ],
+    },
+    {
+        key: 'recharts',
+        label: 'Recharts',
+        children: [
+            {
+                key: 'recharts/bar',
+                label: 'Bar Chart',
+            },
+            {
+                key: 'recharts/pie',
+                label: 'Pie Chart',
+            },
+            {
+                key: 'recharts/scatter',
                 label: 'Scatter Plot',
             },
         ],
