@@ -44,7 +44,12 @@ const items = [
     {
         key: 'echarts',
         label: 'ECharts',
-        children: [],
+        children: [
+            {
+                key: 'bar',
+                label: 'Bar Chart',
+            },
+        ],
     },
     {
         key: 'chart.js',
