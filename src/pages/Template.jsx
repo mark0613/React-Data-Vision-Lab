@@ -8,6 +8,10 @@ const { Content, Footer, Sider } = Layout;
 
 const items = [
     {
+        key: 'intro',
+        label: 'Introduction',
+    },
+    {
         key: 'antd',
         label: 'Ant Design Chart',
         children: [
@@ -115,6 +119,7 @@ export const Template = ({ children }) => {
     const navigate = useNavigate();
 
     const [openKeys, setOpenKeys] = useState([location.pathname.split('/')[1]]);
+    const path = location.pathname.slice(1);
 
     return (
         <Layout>
@@ -127,7 +132,7 @@ export const Template = ({ children }) => {
                     theme="dark"
                     mode="inline"
                     defaultOpenKeys={openKeys}
-                    selectedKeys={[location.pathname.slice(1)]}
+                    selectedKeys={[path || 'intro']}
                     items={items}
                     onClick={({ key }) => {
                         setOpenKeys(key);

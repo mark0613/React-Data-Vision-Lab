@@ -1,0 +1,11 @@
+.wmde-markdown :is(p, ol, li, ul) {
+    margin: 0 !important;
+}
+
+.wmde-markdown :is(ol, ul) {
+    margin-top: -1em !important;
+}
+
+.wmde-markdown :is(h2, h3, h4, h5, h6) {
+    margin-bottom: 0 !important;
+}

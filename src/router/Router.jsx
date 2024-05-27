@@ -14,10 +14,10 @@ import {
     EchartsBarPage,
     EchartsPiePage,
     EchartsScatterPage,
+    IntroPage,
     RechartsBarPage,
     RechartsPiePage,
     RechartsScatterPage,
-    Template,
 } from '../pages';
 
 export const Router = () => (
@@ -25,8 +25,12 @@ export const Router = () => (
         <Routes>
             <Route
                 path="/"
-                element={<Template />}
+                element={<IntroPage />}
                 exact
+            />
+            <Route
+                path="/intro"
+                element={<IntroPage />}
             />
             <Route
                 path="/antd/bar"
