@@ -139,6 +139,7 @@ Recharts 是基於 React 的資料視覺化套件，提供基本的圖表類型�
 
 
 ## Getting Started
+### Local
 1. Node.js v18.13.0
 2. Install dependencies
     ```bash
@@ -149,6 +150,13 @@ Recharts 是基於 React 的資料視覺化套件，提供基本的圖表類型�
     yarn dev
     ```
 4. Open the browser and go to `http://127.0.0.1:3000`
+
+### Docker
+1. Docker compose
+    ```bash
+    docker compose up -d
+    ```
+2. Open the browser and go to `http://127.0.0.1:3000`
 
 
 ## Reference
